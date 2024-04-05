@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rover Operator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Rover Operator</h1>
+    <h2>Map Requests</h2>
+    <form id="map-form">
+      <select id="method-map">
+        <option value="GET">GET</option>
+        <option value="PUT">PUT</option>
+      </select>
+      <input
+        type="text"
+        id="params-map"
+        placeholder="Enter parameters (if any)"
+      />
+      <button type="submit">Submit</button>
+    </form>
+    <h4>Map Response:</h4>
+    <div id="matrix"></div>
+    <pre id="response-map" class="response"></pre>
+    <br />
+    <h2>Mines Requests</h2>
+    <form id="mines-form">
+      <select id="method-mines">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      <input
+        type="text"
+        id="params-mines"
+        placeholder="Enter parameters (if any)"
+      />
+      <input type="text" id="id-mines" placeholder="Enter ID (if any)" />
+      <button type="submit">Submit</button>
+    </form>
+    <h4>Mines Response:</h4>
+    <pre id="response-mines" class="response"></pre>
+    <br />
+    <h2>Rovers Requests</h2>
+    <form id="rovers-form">
+      <select id="method-rovers">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+        <option value="PUT">PUT</option>
+        <option value="DELETE">DELETE</option>
+      </select>
+      <input
+        type="text"
+        id="params-rovers"
+        placeholder="Enter parameters (if any)"
+      />
+      <input type="text" id="id-rovers" placeholder="Enter ID (if any)" />
+      <button type="submit">Submit</button>
+      <!-- <button type="submit" id="dispatch-rovers">Dispatch</button> -->
+    </form>
+    <h4>Rovers Response:</h4>
+    <div id="matrix-rover"></div>
+    <pre id="response-rovers" class="response"></pre>
+
+    <script src="app.js"></script>
+  </body>
+</html>
