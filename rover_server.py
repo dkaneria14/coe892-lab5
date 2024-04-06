@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from helper import checkIfMineExist, read_map,map_to_mine_models,Mine
 from helper import delete_a_mine,create_mine,update_mine
 from helper import read_rovers_from_file,find_rover,create_rover,delete_rover,give_commands,start_rover,RoverReq
+import uvicorn
 
 
 app = FastAPI()
@@ -142,3 +143,7 @@ def send_commands(rover_id: str, commands: str):
 def dispatch_rover(rover_id: str):
 
     return start_rover(rover_id=rover_id)
+
+
+if __name__ == "__main__":
+    uvicorn.run("rover_server:app", host="0.0.0.0", port=8000, reload=True)
