@@ -60,6 +60,6 @@ jobs:
       with:
         app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-        publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }} # Remove publish-profile to use Azure RBAC
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F08F7119320444F989C53732BCAE2C26 }}
         scm-do-build-during-deployment: true
         enable-oryx-build: true
