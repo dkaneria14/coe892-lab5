@@ -1,7 +1,7 @@
 from fastapi import FastAPI,Body
 from fastapi.middleware.cors import CORSMiddleware
-from helper import checkIfMineExist, deleteMine, read_map,map_to_mine_models,Mine
-from helper import find_a_mine,delete_a_mine,create_mine,update_mine
+from helper import checkIfMineExist, read_map,map_to_mine_models,Mine
+from helper import delete_a_mine,create_mine,update_mine
 from helper import read_rovers_from_file,find_rover,create_rover,delete_rover,give_commands,start_rover,RoverReq
 
 
@@ -91,7 +91,7 @@ def modify_map(id:str):
 @app.delete("/mines/{id}")
 def modify_map(id:str):
     #To delete a mine with the “:id”
-    return deleteMine(read_map("mines.txt"),id)
+    return delete_a_mine(read_map("mines.txt"),id)
 
 @app.post("/mines")
 def get_map(mine:Mine= Body(...)):
