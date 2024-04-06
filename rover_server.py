@@ -18,6 +18,7 @@ origins = [
     "http://127.0.0.1:80",
     "http://localhost",
     "null",
+    "https://lab5-dev-kaneria.azurewebsites.net"
     # Add hosted hosted frontend if needed
 ]
 
