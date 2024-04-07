@@ -10,28 +10,6 @@ app = FastAPI()
 
 
 
-origins = [
-    "http://localhost:8000",
-    "http://localhost:3000",
-    "http://127.0.0.1:8000",
-    "http://127.0.0.1:3000",
-    "http://localhost:80",
-    "http://127.0.0.1:80",
-    "http://localhost",
-    "null",
-    "https://lab5-dev-kaneria.azurewebsites.net"
-    # Add hosted hosted frontend if needed
-]
-
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
 # Creation of the methods
 rover_list = []
 # Map Requests -----------------------------------------------------------------
@@ -143,7 +121,3 @@ def send_commands(rover_id: str, commands: str):
 def dispatch_rover(rover_id: str):
 
     return start_rover(rover_id=rover_id)
-
-
-if __name__ == "__main__":
-    uvicorn.run("rover_server:app", host="0.0.0.0", port=8000, reload=True)
